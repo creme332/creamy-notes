@@ -23,15 +23,15 @@ timezone: Indian/Mauritius
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: creme332                          # the main title
+title: creme's notes                          # the main title
 
 tagline: Food for thought  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  Thoughts of creme
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://creme332.github.io/creamy-notes/'
 
 github:
   username: creme332             # change to your github username

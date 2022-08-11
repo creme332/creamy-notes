@@ -1,6 +1,6 @@
 ---
 title: A fast multiplication algorithm - Criss-Cross method
-categories : [maths,programming]
+categories : [Maths,Programming]
 tags :  [algorithms]
 description: A concise explanation of the Criss-Cross multiplication algorithm and its implementation in C++.
 math : true
@@ -22,9 +22,10 @@ There is a sequence of patterns to follow when carrying out the single digit pro
  
 ## Pattern for 2-digit multiplication
 
+> In the following GIFs, the dots represent the digits and each line represent the product of 2 digits.
+{: .prompt-info }
+
 <img src="/assets/vedic/2x2%20multiplication.gif" height ="300" width="400" alt = "2x2 criss-cross multiplication pattern">
- 
-> The dots represent the digits of the numbers being multiplied and each line represent the product of 2 digits.
 
 <img src="/assets/vedic/2x2 multiplication example.gif" height ="300" width="400" alt = "2x2 criss-cross multiplication example">
 
@@ -64,9 +65,12 @@ Step 3.1 : Since there are no more steps, prepend the current sum to our answer.
 <img src="/assets/vedic/5x5%20multiplication.gif" height ="300" width="400" alt = "5x5 criss-cross multiplication pattern">
 
 ## Things to note
-- Make use of symmetry to remember the sequence of patterns. For example, notice that the last $n/2$ patterns are simply a reflection in the vertical axis of the first $n/2$ patterns.
- 
-- When the 2 numbers being multiplied have different lengths, simply prepend zeros to the smaller number to make it the same length as the larger number. For example, the Criss-Cross multiplication of `512323` and `32` is the same as the Criss-Cross multiplication of `512323` and `000032`. In such a case, you will notice that there will be fewer single-digit products to carry out.
+
+> Make use of symmetry to remember the sequence of patterns. For example, notice that the last $n/2$ patterns are simply a reflection in the vertical axis of the first $n/2$ patterns.
+{: .prompt-tip }
+
+> When the 2 numbers being multiplied have different lengths, simply prepend zeros to the smaller number to make it the same length as the larger number. For example, the Criss-Cross multiplication of `512323` and `32` is the same as the Criss-Cross multiplication of `512323` and `000032`. In such a case, you will notice that there will be fewer single-digit products to carry out.
+{: .prompt-tip }
  
 # Proof
 
@@ -74,7 +78,8 @@ Even though I have not found a formal proof for the correctness of the Criss-Cro
 
 <img src="/assets/vedic/Proof.gif" height ="300" width="400" alt = "A gif showing similarity between criss cross multiplcation and grade school multiplication">
 
-We are doing the exact calculations as the grade-school multiplication algorithm. The difference lies in the order in which these calculations are carried out : the Criss-Cross algorithm uses a more efficient order which allows us to work with smaller numbers and gradually build the answer at each step.
+> We are doing the exact calculations as the grade-school multiplication algorithm. The difference lies in the order in which these calculations are carried out : the Criss-Cross algorithm uses a more efficient order which allows us to work with smaller numbers and gradually build the answer at each step.
+{: .prompt-info }
 
 # Code
 ```c++
@@ -119,9 +124,11 @@ std::string vedic(std::string a, std::string b) {
     return ans;
 }
 ```
- \\( \boxed{\text{Time complexity : }\mathbb O (n^2) } \\) 
+> Time complexity : $\mathbb O (n^2)$
+>
+>Space complexity : $\mathbb O (1) $
+{: .prompt-info }
 
- \\( \boxed{\text{Space complexity : }\mathbb O (1) } \\) 
 
 ## Explanation
 ```c++
@@ -137,9 +144,11 @@ for (ll k = 0; k < lines; k++) {
  
  <img src="/assets/vedic/3x3%20pointer.gif" height ="300" width="400" alt = "2x2 criss-cross multiplication pointer explanation gif">
  
-`i` is the index used to iterate over `a` within the region `[min, max]`.
- 
-`j` is the index used to iterate over `b` within the region `[min, max]`.
+> $ i $ :  pointer used to iterate over `a` within the region `[min, max]`.
+> 
+> $ j $ : pointer used to iterate over `b` within the region `[min, max]`.
+{: .prompt-info }
+
  
 ### Case 1 : Both `a` and  `b` have `n` digits
 This is the simplest case. The total number of steps required is `2n-1`. (There are `n` patterns +  `n` reflected patterns. However, the n-th pattern is counted twice so we minus 1.)
@@ -186,7 +195,6 @@ For each step
  
 If carry is non-zero, concatenate it to the left of the answer.
 Return answer
- 
 ```
  
 ### Case 2 : `b` has fewer digits than `a`
@@ -255,13 +263,16 @@ In practice, I decided to compare both algorithms using a basic benchmark method
 
 ## Why use the Criss-Cross algorithm
  
-✅ Much simpler to use with pen and paper than the Karatsuba algorithm and the grade-school algorithm.
+> Much simpler to use with pen and paper than the Karatsuba algorithm and the grade-school algorithm.
+{: .prompt-tip }
 
-✅ Can be used for mental calculations.
+> Can be used for mental calculations.
+{: .prompt-tip }
 
-✅The risk of integer overflow is small as it carries out the sum of single-digit products.
+> The risk of integer overflow is small as it carries out the sum of single-digit products.
+{: .prompt-tip }
 
 ## Why not use the Criss-Cross algorithm
  
-❌ Not suitable for multiplying numbers tending to infinity.
-
+> Not suitable for multiplying numbers tending to infinity.
+{: .prompt-danger }

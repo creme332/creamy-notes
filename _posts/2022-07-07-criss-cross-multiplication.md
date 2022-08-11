@@ -3,6 +3,7 @@ title: A fast multiplication algorithm - Criss-Cross method
 categories : [maths,programming]
 tags :  [algorithms]
 description: A concise explanation of the Criss-Cross multiplication algorithm and its implementation in C++.
+math : true
 ---
  
 # Introduction
@@ -238,7 +239,7 @@ The rest of the code for Case 2 is the same as that in Case 1.
  
 # Comparison with Karatsuba
   
-From the table in Case 1, we can deduce that the total number of single digit products carried out by the Criss-Cross algorithm is $$n^2 + n - 1$$.  In comparison, the total number of single digit products for the Karatsuba algorithm is $$n^{\log_2 3}$$.
+From the table in Case 1, we can deduce that the total number of single digit products carried out by the Criss-Cross algorithm is $$ n^2 + n - 1 $$.  In comparison, the total number of single digit products for the Karatsuba algorithm is $$ n^{\log_2 3} $$.
 
 <img src="/assets/vedic/desmos-graph.png" height ="300" width="400" alt = "graph comparing time complexity of criss cross and karatsuba">
  

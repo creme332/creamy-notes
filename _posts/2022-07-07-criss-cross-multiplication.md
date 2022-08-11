@@ -8,7 +8,7 @@ math : true
  
 # Introduction
  
-Back in 2019, I stumbled upon a multiplication algorithm known as the Criss-Cross multiplication algorithm on [Youtube](https://www.youtube.com/watch?v=JhGzbN5YuPo). It comes from Vedic mathematics, a compendium of tricks for increasing the speed of mathematical calculations. The distinguishing feature of this algorithm is the fact that it can be used for mental calculations and it is much faster than the grade-school multiplication algorithm we all learnt.
+Back in 2019, I stumbled upon the Criss-Cross multiplication algorithm on [Youtube](https://www.youtube.com/watch?v=JhGzbN5YuPo). It comes from Vedic mathematics, a compendium of tricks for increasing the speed of mathematical calculations. The distinguishing feature of this algorithm is the fact that it can be used for mental calculations and it is much faster than the grade-school multiplication algorithm we all learnt.
  
 The implementation of the Criss-Cross multiplication algorithm in C++ can be done in less than [50 lines of code](https://github.com/creme332/big-integer-vedic-multiplication-algorithm/blob/main/Vedic%20Algorithm/VedicMultiplicationAlgorithm.cpp) and it manages to multiply 1000-digit numbers (in string format) almost instantly. Moreover, when multiplying numbers having less than 1000 digits, it is nearly twice as fast as the [Karatsuba algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm#:~:text=The%20Karatsuba%20algorithm%20was%20the,faster%2C%20for%20sufficiently%20large%20n.), one of the most popular fast multiplication algorithms in computer science.
  
@@ -16,8 +16,6 @@ The implementation of the Criss-Cross multiplication algorithm in C++ can be don
 
 There is a sequence of patterns to follow when carrying out the single digit products.
  
-## Rules
-
 1. For each pattern, compute the sum of all the required single digit products and add the carry from the previous step, if any, to this sum .
 2. Prepend the units digit of the sum to our answer so far and carry over the other digits to the next step.
 3. Move to next pattern.
@@ -66,15 +64,13 @@ Step 3.1 : Since there are no more steps, prepend the current sum to our answer.
 <img src="/assets/vedic/5x5%20multiplication.gif" height ="300" width="400" alt = "5x5 criss-cross multiplication pattern">
 
 ## Things to note
-- Make use of symmetry to remember the sequence of patterns. For example, notice that the last n/2 patterns are simply a reflection in the vertical axis of the first n/2 patterns.
+- Make use of symmetry to remember the sequence of patterns. For example, notice that the last $n/2$ patterns are simply a reflection in the vertical axis of the first $n/2$ patterns.
  
 - When the 2 numbers being multiplied have different lengths, simply prepend zeros to the smaller number to make it the same length as the larger number. For example, the Criss-Cross multiplication of `512323` and `32` is the same as the Criss-Cross multiplication of `512323` and `000032`. In such a case, you will notice that there will be fewer single-digit products to carry out.
  
 # Proof
 
-Even though I have not found a formal proof for the correctness of the Criss-Cross algorithm, we can get some insights into why it works by comparing it side-by-side with the grade-school algorithm .  
- 
-The similarities are quite evident:
+Even though I have not found a formal proof for the correctness of the Criss-Cross algorithm, we can get some insights into why it works by comparing it side-by-side with the grade-school algorithm : 
 
 <img src="/assets/vedic/Proof.gif" height ="300" width="400" alt = "A gif showing similarity between criss cross multiplcation and grade school multiplication">
 
@@ -259,7 +255,7 @@ In practice, I decided to compare both algorithms using a basic benchmark method
 
 ## Why use the Criss-Cross algorithm
  
-✅ Much simpler to implement than the Karatsuba algorithm.
+✅ Much simpler to use with pen and paper than the Karatsuba algorithm and the grade-school algorithm.
 
 ✅ Can be used for mental calculations.
 

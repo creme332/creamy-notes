@@ -3,6 +3,7 @@ title: How to build a real-time chat app with Google Sheets
 categories : [Programming]
 tags :  [appscript, tutorial]
 description: Learn to build a real-time chat app with Google Sheets.
+comments: true
 ---
  
 Having scarce knowledge of backend techonologies, I decided to build [1bxoxb1](https://github.com/creme332/1bxoxb1), a simple anonymous chat app, with Google Sheets.  The back-end code, written entirely in Google App Script, surprisingly took less than [40 lines of code](https://github.com/creme332/1bxoxb1/blob/main/appscript/Code.gs). 

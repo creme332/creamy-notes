@@ -1,13 +1,12 @@
 ---
-title: A fast multiplication algorithm - Criss-Cross method
-categories : [Maths,Programming]
-tags :  [algorithms]
+title: Understanding the criss-cross multiplication algorithm
+categories : [Maths, Programming]
+tags :  [algorithms, c++]
 description: A concise explanation of the Criss-Cross multiplication algorithm and its implementation in C++.
 math : true
+comments: true
 ---
- 
-# Introduction
- 
+  
 Back in 2019, I stumbled upon the Criss-Cross multiplication algorithm on [Youtube](https://www.youtube.com/watch?v=JhGzbN5YuPo). It comes from Vedic mathematics, a compendium of tricks for increasing the speed of mathematical calculations. The distinguishing feature of this algorithm is the fact that it can be used for mental calculations and it is much faster than the grade-school multiplication algorithm we all learnt.
  
 The implementation of the Criss-Cross multiplication algorithm in C++ can be done in less than [50 lines of code](https://github.com/creme332/big-integer-vedic-multiplication-algorithm/blob/main/Vedic%20Algorithm/VedicMultiplicationAlgorithm.cpp) and it manages to multiply 1000-digit numbers (in string format) almost instantly. Moreover, when multiplying numbers having less than 1000 digits, it is nearly twice as fast as the [Karatsuba algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm#:~:text=The%20Karatsuba%20algorithm%20was%20the,faster%2C%20for%20sufficiently%20large%20n.), one of the most popular fast multiplication algorithms in computer science.

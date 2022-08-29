@@ -12,7 +12,12 @@ Having scarce knowledge of backend techonologies, I decided to build [1bxoxb1](h
  <img src="/assets/appscript-app/website.gif" height ="500" width="600" alt = "GIF of chat app">
 _A real-time no-login online chat app_
 
-The goal of this post is to document my steps I took to build [1bxoxb1](https://github.com/creme332/1bxoxb1).
+> [Github repository](https://github.com/creme332/1bxoxb1)
+>
+> [Live demo](https://script.google.com/macros/s/AKfycbz3_jQSeelwylADfsLTh0hqxqqkGsoYyRG19UilpUde2dDJCjv79H3tOjrJMzp_DxrpbA/exec)
+{: .prompt-tip }
+
+The goal of this post is to document the process to build this project.
 
 # Getting started
 - Basic knowledge of HTML, CSS and JS is required.
@@ -159,7 +164,7 @@ The CSS code is available [here](https://github.com/creme332/1bxoxb1/blob/main/a
 >Edit the `JavaScript.html`{: .filepath } file.
 {: .prompt-info }
 
-The full code is available [here](https://github.com/creme332/1bxoxb1/blob/main/appscript/JavaScript.html) and I will explain only the important parts of the code.
+I will explain only the important parts of the code. The full JS code is available [here](https://github.com/creme332/1bxoxb1/blob/main/appscript/JavaScript.html). 
 
 >Remember to include `<script>`{: .filepath } tags in  `Stylesheet.html`{: .filepath }.
 {: .prompt-warning }
@@ -219,13 +224,13 @@ Every `REFRESH_RATE` milliseconds, the following line is executed :
 > The number of messages currently being displayed in the message-container is  $ \text{currentRowIndex + 1} $,  where $ \text{currentRowIndex} $ is a global variable.
 {: .prompt-info }
  
- >The default value of $ \text{REFRESH_RATE} $ is 2000 milliseconds. It can be reduced to make refreshing of messages faster but in doing so, the number of concurrent users on the chat app will be reduced.
+ >The default value of `REFRESH_RATE`{: .filepath } is 2000 milliseconds. It can be reduced to make refreshing of messages faster but in doing so, the number of concurrent users on the chat app will be reduced.
  {: .prompt-danger }
 
 ## Deploy project
 - Deploy your project as a web app.
 - The web app requires you to authorize access to your data.
- 
+
 >If you face the  “Sorry unable to open file at this moment” problem, try opening the web app in incognito. Read [this](https://www.codejam.info/2022/04/google-apps-script-unable-to-open-the-file.html) for more information.
 {: .prompt-tip }
 
@@ -235,7 +240,7 @@ Every `REFRESH_RATE` milliseconds, the following line is executed :
 - A maximum of 30 concurrent users is allowed.
 - Google Sheet API allows at most 300 requests per minute.
  
-## AppScript IDE
+## AppScript Online IDE
 - No version control system like Git.
 - No keyboard shortcuts available like in VSCode.
 - `Rename Symbol` option was not working at the time when I wrote my code.

@@ -1,5 +1,5 @@
 # The Site Configuration 
-# To execute : type bash then bundle exec jekyll serve
+# To execute : type bash then bundle exec jekyll s
 
 # Import the theme
 theme: jekyll-theme-chirpy
@@ -91,7 +91,7 @@ avatar: assets/img/favicons/mstile-150x150.png
 toc: true
 
 comments:
-  active:         # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  active: 'utterances'         # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
   disqus:
     shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname

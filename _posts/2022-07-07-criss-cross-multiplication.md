@@ -29,7 +29,7 @@ There is a sequence of patterns to follow when carrying out the single digit pro
 <img src="/assets/vedic/2x2 multiplication example.gif" height ="300" width="400" alt = "2x2 criss-cross multiplication example">
 
 <details>
-  <summary>Detailed explanation for 29 x 12</summary>
+  <summary>Detailed explanation for $29 \times 12$</summary>
   <li>
 Step 1 : Multiply the digits in the right-most column (\( 9\times2 \)) to obtain \( 18 \).</li>
    <li>
@@ -68,7 +68,7 @@ Step 3.1 : Since there are no more steps, prepend the current sum to our answer.
 > Make use of symmetry to remember the sequence of patterns. For example, notice that the last $n/2$ patterns are simply a reflection in the vertical axis of the first $n/2$ patterns.
 {: .prompt-tip }
 
-> When the 2 numbers being multiplied have different lengths, simply prepend zeros to the smaller number to make it the same length as the larger number. For example, the Criss-Cross multiplication of `512323` and `32` is the same as the Criss-Cross multiplication of `512323` and `000032`. In such a case, you will notice that there will be fewer single-digit products to carry out.
+> When the 2 numbers being multiplied have different lengths, simply prepend zeros to the smaller number to make it the same length as the larger number. For example, the Criss-Cross multiplication of $512323$ and $32$ is the same as the Criss-Cross multiplication of $512323$ and $000032$. In such a case, you will notice that there will be fewer single-digit products to carry out.
 {: .prompt-tip }
  
 # Proof
@@ -139,18 +139,18 @@ for (ll k = 0; k < lines; k++) {
 }
 ```
 
-```min``` and ```max``` keep track of the region within which the cross-multiplication will take place.
+$min$ and $max$ keep track of the region within which the cross-multiplication will take place.
  
  <img src="/assets/vedic/3x3%20pointer.gif" height ="300" width="400" alt = "2x2 criss-cross multiplication pointer explanation gif">
  
-> $ i $ :  pointer used to iterate over `a` within the region `[min, max]`.
+> $ i $ :  pointer used to iterate over $a$ within the range $[min, max]$.
 > 
-> $ j $ : pointer used to iterate over `b` within the region `[min, max]`.
+> $ j $ : pointer used to iterate over $b${: .filepath } within the range $[min, max]$.
 {: .prompt-info }
 
  
-### Case 1 : Both `a` and  `b` have `n` digits
-This is the simplest case. The total number of steps required is `2n-1`. (There are `n` patterns +  `n` reflected patterns. However, the n-th pattern is counted twice so we minus 1.)
+### Case 1 : Both $a$ and  $b$ have $n$ digits
+This is the simplest case. The total number of steps required is $2n-1$. (There are $n$ patterns +  $n$ reflected patterns. However, the $n$-th pattern is counted twice so we minus $1$.)
  
 The number of single digit product (or the number of lines drawn) at each step can be found as follows :
 ```c++
@@ -160,17 +160,17 @@ else {lines = n - (currentstep - n);} // or 2*n - currentstep
  
 | Step number | Number of single digit product required |
 | :---        |    :----:   |
-| 1      | 1       |
-| 2   | 2        |
-| 3   | 3        |
-| 4   | 4        |
-| ...   | ...        |
-| n   | n        |
-| n+1  | n-1        |
-| n+2   | n-2        |
-| n+3   | n-3        |
-| ...   | ...        |
-| 2n-1   | 1        |
+|$ 1 $     | $1 $      |
+|$ 2  $ |$ 2   $     |
+|$ 3 $  | $3 $       |
+|$ 4  $ | $4  $      |
+|$ ... $  |$ ... $       |
+|$ n $  | $n    $    |
+| $n+1$  | $n-1$      |
+| $n+2  $ | $n-2 $       |
+| $n+3$   | $n-3  $      |
+| $... $  | $...$        |
+|$ 2n-1 $  |$ 1 $       |
  
 At each step, we will compute the sum of all the 1-digit multiplications required. From this sum we will obtain the carry for the next step and a digit of our answer.
 
@@ -196,8 +196,8 @@ If carry is non-zero, concatenate it to the left of the answer.
 Return answer
 ```
  
-### Case 2 : `b` has fewer digits than `a`
-This case could be eliminated if we simply make both `a` and `b` the same length initially by adding leading zeros to `b`. However, this approach is time-consuming because there will be unnecessary and will introduce leading zeros in our final answer which must be removed.
+### Case 2 : $b$ has fewer digits than $a$
+This case could be eliminated if we simply make both $a$ and $b$ the same length initially by adding leading zeros to $b$. However, this approach is time-consuming because there will be unnecessary and will introduce leading zeros in our final answer which must be removed.
  
 To bypass this problem, we simply reduce the total number of steps and the number of single digit products at each step to eliminate cases where the 1-digit multiplication involves a leading zero.
  
@@ -205,7 +205,7 @@ The total number of steps is now found using :
 
 $$ \boxed{\text{totalsteps = length(a) + length(b) - 1}}$$
 
-For each step, we first find the expected number of 1-digit multiplication if `a` and `b` were the same length :
+For each step, we first find the expected number of 1-digit multiplication if $a$ and $b$ were the same length :
 ```c++
 if (step <= asize) {
       lines = step;
@@ -215,7 +215,7 @@ else {
 }
 ```
  
-When all the digits of `b` have been traversed, `min` becomes negative. Previously when `a` and `b` were the same length, we exited when `min` was negative. However, when they differ in length, we cannot exit. Now, each time `min` reaches the start of `b`, we decrement `max` and keep `min` at index 0 of `b`.
+When all the digits of $b$ have been traversed, $min$ becomes negative. Previously when $a$ and $b$ were the same length, we exited when $min$ was negative. However, when they differ in length, we cannot exit. Now, each time $min$ reaches the start of $b$, we decrement $max$ and keep $min$ at index 0 of $b$.
 ```c++
 if (min < 0) {
     min = 0;

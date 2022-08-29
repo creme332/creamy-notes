@@ -4,6 +4,7 @@ categories : [Programming]
 tags :  [appscript, tutorial]
 description: Learn to build a real-time chat app with Google Sheets.
 comments: true
+math : true
 ---
  
 Having scarce knowledge of backend techonologies, I decided to build [1bxoxb1](https://github.com/creme332/1bxoxb1), a simple anonymous chat app, with Google Sheets.  The back-end code, written entirely in Google App Script, surprisingly took less than [40 lines of code](https://github.com/creme332/1bxoxb1/blob/main/appscript/Code.gs). 
@@ -24,7 +25,7 @@ The goal of this post is to document my steps I took to build [1bxoxb1](https://
  
 ## Create a Google Sheets database
  
-- Go to [Google Sheets ](https://docs.google.com/spreadsheets/u/0/) to create a spreadsheet. The name of the file is not important.
+- Go to [Google Sheets ](https://docs.google.com/spreadsheets/u/0/) to create a spreadsheet. The spreadsheet name is not important.
 - Open your spreadsheet and change the first empty row to :
  
 date | username | message
@@ -33,7 +34,7 @@ date | username | message
 |
  
 ## Create AppScript project
--  Go to the [AppScript dashboard](https://script.google.com/) to create and open a new appscript project. The name of the project is not important.
+-  Go to the [AppScript dashboard](https://script.google.com/) to create and open a new appscript project. The project name is not important.
 - There is currently a single file `Code.gs` in your project. Create 3 new **HTML** files to make your file structure look like this :
 ```
 Files
@@ -46,7 +47,7 @@ Files
  
 ## Write server-side code
  
->The server-side code is  written in the `Code.gs` file.
+>The server-side code is  written in the `Code.gs`{: .filepath } file.
 {: .prompt-info }
  
 ### Add spreadsheet information
@@ -114,10 +115,10 @@ function getSpreadsheetData() {
  
 ### HTML
  
->Edit the `Index.html` file.
+>Edit the `Index.html`{: .filepath } file.
 {: .prompt-info }
 
->Include  `<?!= include('Stylesheet'); ?>` in head tag and   `<?!= include('JavaScript'); ?>` just before **end of body tag**.
+>Add  `<?!= include('Stylesheet'); ?>`{: .filepath } in head tag and   `<?!= include('JavaScript'); ?>`{: .filepath } just before **end of body tag**.
 {: .prompt-tip }
  
 ```html
@@ -145,22 +146,22 @@ _Wireframe of the website_
  
 ### CSS
  
->Edit the `Stylesheet.html` file.
+>Edit the `Stylesheet.html`{: .filepath } file.
 {: .prompt-info }
 
 The CSS code is available [here](https://github.com/creme332/1bxoxb1/blob/main/appscript/Stylesheet.html). The code itself is not important and can be modified.
  
->Remember to include `<style>` tags in  `Stylesheet.html`.
+>Remember to include `<style>`{: .filepath } tags in  `Stylesheet.html`{: .filepath }.
 {: .prompt-tip }
 
 ### JavaScript
  
->Edit the `JavaScript.html` file.
+>Edit the `JavaScript.html`{: .filepath } file.
 {: .prompt-info }
 
 The full code is available [here](https://github.com/creme332/1bxoxb1/blob/main/appscript/JavaScript.html) and I will explain only the important parts of the code.
 
->Remember to include `<script>` tags in  `Stylesheet.html`.
+>Remember to include `<script>`{: .filepath } tags in  `Stylesheet.html`{: .filepath }.
 {: .prompt-warning }
  
 #### Send message to database
@@ -215,10 +216,10 @@ Every `REFRESH_RATE` milliseconds, the following line is executed :
   setInterval(updateMessages, REFRESH_RATE);
 ```
 
-> The number of messages currently being displayed in the message-container is  `currentRowIndex + 1`,  where `currentRowIndex` is a global variable.
+> The number of messages currently being displayed in the message-container is  $ \text{currentRowIndex + 1} $,  where $ \text{currentRowIndex} $ is a global variable.
 {: .prompt-info }
  
- >The default value of `REFRESH_RATE` is 2000 milliseconds. It can be reduced to make refreshing of messages faster but in doing so, the number of concurrent users on the chat app will be reduced.
+ >The default value of $ \text{REFRESH_RATE} $ is 2000 milliseconds. It can be reduced to make refreshing of messages faster but in doing so, the number of concurrent users on the chat app will be reduced.
  {: .prompt-danger }
 
 ## Deploy project

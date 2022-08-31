@@ -64,6 +64,8 @@ const SPREADSHEET_URL = "PLACE YOUR URL HERE";
 const spreadsheet = SpreadsheetApp.openByUrl(SPREADSHEET_URL);
 const worksheet = spreadsheet.getSheetByName("YOUR SHEET NAME");
 ```
+{: file="Code.gs" }
+
  
 ### Add boilerplate code
  
@@ -79,6 +81,7 @@ function include(filename) {
     .getContent();
 }
 ```
+{: file="Code.gs" }
  
 The `doGet()` function for templated HTML generates an `HtmlTemplate` object from the HTML file. Then `doGet()` calls its `evaluate()` method to execute the scriptlets and convert the template into an `HtmlOutput` object that the script can serve to the user.
  
@@ -89,11 +92,14 @@ The custom server-side `include()` function imports the `Stylesheet.html` and `J
 When a user sends a message, the  server-side function `addNewRowToSheet()` is called from the client-side.
  
 `addNewRowToSheet()` will append the date, the name of the sender, and the message to the spreadsheet.
+
 ```js
 function addNewRowToSheet(username, user_input) {
   worksheet.appendRow([new Date().toString(), username, user_input]);
 }
 ```
+{: file="Code.gs" }
+
 >The date must be in string format so that it can be passed to the client later. Read more about legal parameters in appscript [here](https://developers.google.com/apps-script/guides/html/reference/run#myFunction(...)).
 {: .prompt-warning }
  
@@ -115,6 +121,7 @@ function getSpreadsheetData() {
   });
 }
 ```
+{: file="Code.gs" }
  
 ## Write client-side code
  
@@ -145,6 +152,7 @@ function getSpreadsheetData() {
 </body>
 </html>
 ```
+{: file="Index.html" }
 
 <img src="/assets/appscript-app/wireframe.png" height ="500" width="600" alt = "Wireframe of html page">
 _Wireframe of the website_
@@ -186,12 +194,15 @@ function saveToSpreadsheet() {
 }
 sendButton.addEventListener("click", saveToSpreadsheet)
 ```
+{: file="JavaScript.html" }
+
 #### Update messages in real-time
 Every `REFRESH_RATE` milliseconds, the following line is executed :
  
 ```js
  google.script.run.withSuccessHandler(onSuccess).getSpreadsheetData();
 ```
+{: file="JavaScript.html" }
  
 - `script.run.getSpreadsheetData()` calls the server side function `getSpreadsheetData()`.
  
@@ -220,6 +231,7 @@ Every `REFRESH_RATE` milliseconds, the following line is executed :
   }
   setInterval(updateMessages, REFRESH_RATE);
 ```
+{: file="JavaScript.html" }
 
 > The number of messages currently being displayed in the message-container is  $ \text{currentRowIndex + 1} $,  where $ \text{currentRowIndex} $ is a global variable.
 {: .prompt-info }

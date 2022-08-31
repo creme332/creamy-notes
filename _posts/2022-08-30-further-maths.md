@@ -23,10 +23,11 @@ Resource| Description |
 [Libretext](https://libretexts.org/)| Online textbook platform
 [Multivariable Calculus By James Stewart](http://www.uop.edu.pk/ocontents/Multivariable%20Calculus%207th%20Edition%20By%20James%20Stewart.pdf)| Not catered for A-level syllabus but some chapters (Polar coordinates, vectors, differential equations) are worth a read.
  
-# Question bank
+# Questions
 >It is important, therefore, that those who prepare for an examination of this type do not fall back entirely on routine examples.
 >
->   Cambridge Examiners' Report from 2003 [9231_w03_er]
+> -- <cite>Cambridge Examiners' Report [9231_w03_er]</cite>
+  
  
 Practising similar questions from past papers over and over again  leads to diminishing returns.  Here are websites where you can find **non-routine questions ranging in difficulty**  :
  
@@ -35,7 +36,7 @@ Resource| Description
 [Madamaths](https://www.madasmaths.com/)| Great range of topical questions. 
 [Isaac Physics](https://isaacphysics.org/pages/maths_practice?stage=all)| Online learning platform created by Cambridge itself. Questions are based on past papers and are arranged by topic. Hints are offered for each question.
 [Underground Mathematics](https://undergroundmathematics.org/)| A database of questions, some dating from the 1950s, across multiple exam boards past papers. Hints and step-by-step explanations are offered for each question.
-[Maths and Physics tutor](https://www.physicsandmathstutor.com/a-level-maths/past-paper-questions-by-topic/) | Topical questions along with their solutions.
+[Maths and Physics Tutor](https://www.physicsandmathstutor.com/a-level-maths/past-paper-questions-by-topic/) | Topical questions along with their solutions.
 [Dr Oliver Maths](https://www.drolivermathematics.com/)| Topical questions along with their solutions.
 [Dr Frost Maths](https://www.drfrostmaths.com/worksheets.php?wdid=2)| Online learning platform with worksheets from a range of examination boards.
 [Pre-2010 Cambridge A-level Maths (9709) M2 past papers (Paper 52)](https://papers.gceguide.com/A%20Levels/Mathematics%20(9709)/)| Questions in these past papers are relevant to Cambridge A-level Further Mechanics.
@@ -55,7 +56,7 @@ Resource| Description |
 [Kinematics Fundamental by Sunil Kumar](https://cnx.org/contents/UYPplaH7@29.32:-a6Hw7ZQ@7/Collision-of-projectiles) | Great notes, questions, and explanations on Kinematics. Some questions are quite challenging.
 [Paul's Online Notes](https://tutorial.math.lamar.edu/)	| University notes some of which are relevant to A-level Further Maths. Also has a practice problems section. I personally used the website to learn about the [integral test](https://tutorial.math.lamar.edu/classes/calcii/IntegralTest.aspx).
 [Hyperbolic notes](https://openstax.org/books/calculus-volume-1/pages/6-9-calculus-of-the-hyperbolic-functions) | Notes from Calculus 1 book from OpenStax.
-[Brilliant.org](https://brilliant.org/wiki/vietas-formula/) | To learn about roots of polynomial
+[Brilliant.org](https://brilliant.org/wiki/vietas-formula/) | Has good notes on roots of polynomial
 
 ## University  lecture notes
 
@@ -82,7 +83,7 @@ Resource| Description |
 [Tom Rock Maths](https://www.youtube.com/c/TomRocksMaths/playlists) | Videos on linear algebra and differential equations.
 [MIT OpenCourseWare](https://ocw.mit.edu/) | Their maths and physics courses are the most relevant for FM. Example :[differential equations video](https://ocw.mit.edu/courses/2-087-engineering-math-differential-equations-and-linear-algebra-fall-2014/video_galleries/lecture-videos/). Lecture notes and questions are available on their website.
 
-# Find help
+# Support
 
 Getting stuck on a question or not understanding a chapter can be frustrating especially when you are self-learning. Here are some places to find help :
  
@@ -93,7 +94,7 @@ Resource| Description |
 [Physics Exchange](https://physics.stackexchange.com/)| Question-answer forum for maths questions. Use it for questions on Mechanics.
 [Cross Validated](https://stats.stackexchange.com/)|Question-answer forum for statistics questions. Use it for questions on statistics.
 [physicsforums](https://www.physicsforums.com/)| Consult the threads on maths and physics.
-[Further maths subreddit](https://www.reddit.com/r/furthermaths/) | Subreddit made specifically for A-level Further Maths students.
+[r/furthermaths](https://www.reddit.com/r/furthermaths/), [r/alevel](https://www.reddit.com/r/alevel/)| These subreddits are used by A-level students who might be able to help you.
 [studentroom](https://www.thestudentroom.co.uk/forum.php) | studentroom has some study help forums that are worth mentioning even though I've never used them.
 
 >Some of the above forums have a **strict etiquette** for posting questions. To increase the chances of someone helping you, you must ask a good question in the right place. Read [here](https://math.meta.stackexchange.com/questions/9959/how-to-ask-a-good-question) and [here](https://physics.meta.stackexchange.com/questions/714/how-do-i-ask-homework-questions-on-physics-stack-exchange) on how to ask a good question.
@@ -120,7 +121,7 @@ _Visualising planes in Geogebra_
 
 # Progress tracking
 
-I used [Notion](https://www.notion.so/) for storing my notes, tracking unsolved questions and  past papers, and everything else.
+I used [Notion](https://www.notion.so/), a digital note-taking app, for storing my notes and tracking unsolved questions and  past papers.
 
 <img src="/assets/further-maths/fm.gif" height ="500" width="600" alt = "GIF showing my past papers working schedule">
 _My past papers working schedule for the few weeks leading to my exams_

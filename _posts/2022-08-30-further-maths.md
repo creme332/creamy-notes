@@ -131,7 +131,7 @@ _My notes on polar coordinates in Notion_
 
 # Other resources
 
-Here are some other websites/videos with some additional resources :
+Here are other websites/videos with additional resources :
 
 Resource| Description |
 --|--|

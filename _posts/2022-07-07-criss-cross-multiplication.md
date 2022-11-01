@@ -5,6 +5,7 @@ tags :  [algorithms, c++]
 description: A concise explanation of the Criss-Cross multiplication algorithm and its implementation in C++.
 math : true
 comments: true
+img_path: /assets/vedic/
 ---
   
 Back in 2019, I stumbled upon the Criss-Cross multiplication algorithm on [Youtube](https://www.youtube.com/watch?v=JhGzbN5YuPo). It comes from Vedic mathematics, a compendium of tricks for increasing the speed of mathematical calculations. The distinguishing feature of this algorithm is the fact that it can be used for mental calculations and it is much faster than the grade-school multiplication algorithm we all learnt.
@@ -24,9 +25,9 @@ There is a sequence of patterns to follow when carrying out the single digit pro
 > In the following GIFs, the dots represent the digits and each line represent the product of 2 digits.
 {: .prompt-info }
 
-<img src="/assets/vedic/2x2%20multiplication.gif" height ="300" width="400" alt = "2x2 criss-cross multiplication pattern">
+<img src="2x2%20multiplication.gif" height ="300" width="400" alt = "2x2 criss-cross multiplication pattern">
 
-<img src="/assets/vedic/2x2 multiplication example.gif" height ="300" width="400" alt = "2x2 criss-cross multiplication example">
+<img src="2x2 multiplication example.gif" height ="300" width="400" alt = "2x2 criss-cross multiplication example">
 
 <details>
   <summary>Detailed explanation for $29 \times 12$</summary>
@@ -51,17 +52,17 @@ Step 3.1 : Since there are no more steps, prepend the current sum to our answer.
   
 ## Pattern for 3-digit multiplication
 
-<img src="/assets/vedic/3x3%20multiplication.gif" height ="300" width="400" alt = "3x3 criss-cross multiplication pattern">
+<img src="3x3%20multiplication.gif" height ="300" width="400" alt = "3x3 criss-cross multiplication pattern">
 
-<img src="/assets/vedic/3x3%20example.gif" height ="300" width="400" alt = "3x3 criss-cross multiplication example">
+<img src="3x3%20example.gif" height ="300" width="400" alt = "3x3 criss-cross multiplication example">
  
 ## Pattern for 4-digit multiplication
 
-<img src="/assets/vedic/4x4%20multiplication.gif" height ="300" width="400" alt = "4x4 criss-cross multiplication pattern">
+<img src="4x4%20multiplication.gif" height ="300" width="400" alt = "4x4 criss-cross multiplication pattern">
 
 ## Pattern for 5-digit multiplication
 
-<img src="/assets/vedic/5x5%20multiplication.gif" height ="300" width="400" alt = "5x5 criss-cross multiplication pattern">
+<img src="5x5%20multiplication.gif" height ="300" width="400" alt = "5x5 criss-cross multiplication pattern">
 
 ## Things to note
 
@@ -75,7 +76,7 @@ Step 3.1 : Since there are no more steps, prepend the current sum to our answer.
 
 Even though I have not found a formal proof for the correctness of the Criss-Cross algorithm, we can get some insights into why it works by comparing it side-by-side with the grade-school algorithm : 
 
-<img src="/assets/vedic/Proof.gif" height ="300" width="400" alt = "A gif showing similarity between criss cross multiplcation and grade school multiplication">
+<img src="Proof.gif" height ="300" width="400" alt = "A gif showing similarity between criss cross multiplcation and grade school multiplication">
 
 > We are doing the exact calculations as the grade-school multiplication algorithm. The difference lies in the order in which these calculations are carried out : the Criss-Cross algorithm uses a more efficient order which allows us to work with smaller numbers and gradually build the answer at each step.
 {: .prompt-info }
@@ -141,7 +142,7 @@ for (ll k = 0; k < lines; k++) {
 
 $min$ and $max$ keep track of the region within which the cross-multiplication will take place.
  
- <img src="/assets/vedic/3x3%20pointer.gif" height ="300" width="400" alt = "2x2 criss-cross multiplication pointer explanation gif">
+ <img src="3x3%20pointer.gif" height ="300" width="400" alt = "2x2 criss-cross multiplication pointer explanation gif">
  
 > $ i $ :  pointer used to iterate over $a$ within the range $[min, max]$.
 > 
@@ -236,7 +237,7 @@ if (min < 0) {
     }
 }
 ```
-<img src="/assets/vedic/2x2 multiplication example.gif" height ="300" width="400" alt = "2x2 criss-cross multiplication example">
+<img src="2x2 multiplication example.gif" height ="300" width="400" alt = "2x2 criss-cross multiplication example">
  
 The rest of the code for Case 2 is the same as that in Case 1.
  
@@ -244,7 +245,7 @@ The rest of the code for Case 2 is the same as that in Case 1.
   
 From the table in Case 1, we can deduce that the total number of single digit products carried out by the Criss-Cross algorithm is $$ n^2 + n - 1 $$.  In comparison, the total number of single digit products for the Karatsuba algorithm is $$ n^{\log_2 3} $$.
 
-<img src="/assets/vedic/desmos-graph.png" height ="300" width="400" alt = "graph comparing time complexity of criss cross and karatsuba">
+<img src="desmos-graph.png" height ="300" width="400" alt = "graph comparing time complexity of criss cross and karatsuba">
  
 In theory, as the numbers being multiplied tend to infinity, the Karatsuba algorithm will perform better. However, for relatively small numbers, the Karatsuba algorithm actually performs worse.
 

@@ -5,11 +5,12 @@ tags :  [appscript, tutorial]
 description: Learn to build a real-time chat app with Google Sheets.
 comments: true
 math : true
+img_path: /assets/appscript-app/
 ---
  
 Having scarce knowledge of backend techonologies, I decided to build [1bxoxb1](https://github.com/creme332/1bxoxb1), a simple anonymous chat app, with Google Sheets.  The back-end code, written entirely in Google App Script, surprisingly took less than [40 lines of code](https://github.com/creme332/1bxoxb1/blob/main/appscript/Code.gs). 
 
- <img src="/assets/appscript-app/website.gif" height ="500" width="600" alt = "GIF of chat app">
+ <img src="website.gif" height ="500" width="600" alt = "GIF of chat app">
 _A real-time no-login online chat app_
 
 > [Github repository](https://github.com/creme332/1bxoxb1)

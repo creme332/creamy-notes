@@ -4,6 +4,7 @@ categories : [Maths]
 tags :  [a-level]
 description: High-quality free resources to self-learn A-level Further Mathematics.
 comments: true
+img_path: /assets/further-maths/
 ---
 
 Last year, I took up the challenge to self-learn Cambridge A-level Further Mathematics and in the process I came across a lot of interesting free high-quality online resources which have helped me a lot. The goal of this post is to compile all these resources in one place.
@@ -116,17 +117,17 @@ Resource| Description |
 [Integration calculator](https://www.integral-calculator.com/)		| Step-by-step explanation on how to integrate an expression.
 [Derivative calculator](https://www.derivative-calculator.net/)	| Step-by-step explanation on how to differentiate an expression.
  
-<img src="/assets/further-maths/geogebra.png" height ="600" width="600" alt = "Visualising planes in Geogebra">
+<img src="geogebra.png" height ="600" width="600" alt = "Visualising planes in Geogebra">
 _Visualising planes in Geogebra_
 
 # Progress tracking
 
 I used [Notion](https://www.notion.so/), a digital note-taking app, for storing my notes and tracking unsolved questions and  past papers.
 
-<img src="/assets/further-maths/fm.gif" height ="500" width="600" alt = "GIF showing my past papers working schedule">
+<img src="fm.gif" height ="500" width="600" alt = "GIF showing my past papers working schedule">
 _My past papers working schedule for the few weeks leading to my exams_
 
-<img src="/assets/further-maths/notes.gif" height ="600" width="600" alt = "GIF showing my notes on polar coordinates in Notion">
+<img src="notes.gif" height ="600" width="600" alt = "GIF showing my notes on polar coordinates in Notion">
 _My notes on polar coordinates in Notion_
 
 # Other resources

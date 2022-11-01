@@ -23,12 +23,12 @@ timezone: Indian/Mauritius
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: creme's notes                          # the main title
+title: creamy-notes                         # the main title
 
-tagline: since 2022  # it will display as the sub-title
+tagline: by creme332 # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Thoughts of creme
+  creamy-notes is a blog website where creme332 shares his thoughts on programming and math.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'http://creme332.github.io'

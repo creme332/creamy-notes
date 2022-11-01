@@ -90,7 +90,7 @@ pie
  
 **25-31 July** : I implemented "complex" features like Paint bucket fill, Undo/Redo. This was a fun project to work on.
 
- <img src="https://github.com/creme332/my-odin-projects/raw/main/etch-a-sketch/iterations/iteration1.gif" height ="300" width ="300"  alt = "Image of Etch-a-sketch project">
+ <img src="https://github.com/creme332/my-odin-projects/raw/main/etch-a-sketch/iterations/iteration1.gif" height ="500" width ="500"  alt = "Image of Etch-a-sketch project">
 
 ### Calculator project (3 days)
 **13-15 August** : I did not want to spend too much time on this project but I still wanted to create something totally different from others. I finally settled for a basic version of an abacus.

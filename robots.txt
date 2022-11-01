@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /norobots/
+
+Sitemap: http://creme332.github.io/creamy-notes/sitemap.xml
